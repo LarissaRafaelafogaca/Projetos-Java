@@ -6,7 +6,7 @@ public class CalculadoraImposto {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Entrada de dados
+    
         System.out.print("Renda anual com salário: ");
         double salarioAnual = scanner.nextDouble();
 
@@ -22,18 +22,18 @@ public class CalculadoraImposto {
         System.out.print("Gastos educacionais: ");
         double gastosEducacionais = scanner.nextDouble();
 
-        // Cálculo dos impostos
+        
         double impostoSalario = calcularImpostoSalario(salarioAnual);
         double impostoServicos = prestacaoServicos * 0.15;
         double impostoGanhoCapital = ganhoCapital * 0.20;
 
-        // Cálculo das deduções
+        
         double totalImpostoBruto = impostoSalario + impostoServicos + impostoGanhoCapital;
         double dedutivel = calcularDeducao(gastosMedicos, gastosEducacionais, totalImpostoBruto * 0.30);
 
         double impostoDevido = totalImpostoBruto - dedutivel;
 
-        // Exibir o relatório
+        
         System.out.println("\n### RELATÓRIO DE IMPOSTO DE RENDA ###");
         System.out.println("* CONSOLIDADO DE RENDA:");
         System.out.printf("Imposto sobre salário: %.2f\n", impostoSalario);
