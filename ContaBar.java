@@ -7,7 +7,7 @@ public class ContaBar {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Entrada de dados
+        
         System.out.print("Sexo (M/F): ");
         char sexo = scanner.next().toUpperCase().charAt(0);
 
@@ -20,15 +20,15 @@ public class ContaBar {
         System.out.print("Quantidade de espetinhos: ");
         int espetinhos = scanner.nextInt();
 
-        // Cálculo do consumo
+       
         double consumo = calcularConsumo(cervejas, refrigerantes, espetinhos);
         double ingresso = (sexo == 'F') ? 8.0 : 10.0;
         double couvert = (consumo > 30) ? 0 : 4;
 
-        // Valor total a pagar
+       
         double valorTotal = consumo + ingresso + couvert;
 
-        // Exibir o relatório
+        
         System.out.println("\nRELATÓRIO:");
         System.out.printf("Consumo = R$ %.2f\n", consumo);
         System.out.printf("Couvert = R$ %.2f\n", couvert);
